@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      select {
+        background-color: #d9138a;
+        color: white;
+        font-size: 25px;
+      }
+      ::placeholder {
+        color: white;
+      }
+      input {
+        background-color: #d9138a;
+        color: white;
+        font-size: 20px;
+      }
+
+      label {
+        font-size: 30px;
+      }
+    </style>
+  </head>
+  <body></body>
+  <script>
+    //main div
+    const maindiv = document.createElement("div");
+    maindiv.id = "maindiv";
+    maindiv.style.height = "100hw";
+    maindiv.style.width = "550px";
+    maindiv.style.marginTop = "90px";
+    maindiv.style.border = "2px solid black ";
+    maindiv.style.borderRadius = "10px ";
+    maindiv.style.padding = "10px ";
+    maindiv.style.display = "flex";
+    maindiv.style.flexDirection = "column";
+    maindiv.style.backgroundColor = " #12a4d9";
+    document.body.appendChild(maindiv);
+
+    //1 label
+    const firstlabel = document.createElement("label");
+    firstlabel.id = "firstlabel";
+    firstlabel.innerText = "Choice of booking : ";
+    maindiv.appendChild(firstlabel);
+
+    // Selector
+    const select = document.createElement("select");
+    select.id = "selector";
+    select.style.backgroundColor = "#d9138a";
+    select.style.Color = "white";
+    select.style.fontSize = "25px";
+    maindiv.appendChild(select);
+
+    //option 1
+    const option1 = document.createElement("option");
+    option1.id = "option1";
+    option1.value = "option_1";
+    option1.innerText = "Select your option";
+    select.appendChild(option1);
+
+    //option 2
+    const option2 = document.createElement("option");
+    option2.id = "option2";
+    option2.value = "option_2";
+    option2.innerText = "Full day booking";
+    select.appendChild(option2);
+
+    //option 3
+    const option3 = document.createElement("option");
+    option3.id = "option3";
+    option3.value = "option_3";
+    option3.innerText = "Half day booking";
+    select.appendChild(option3);
+
+    //option 4
+    const option4 = document.createElement("option");
+    option4.id = "option4";
+    option4.value = "option_4";
+    option4.innerText = "Hourly booking";
+    select.appendChild(option4);
+
+    //label 2 = username
+    const secondlabel = document.createElement("label");
+    secondlabel.id = "secondlabel";
+    secondlabel.style.padding = "2px";
+    secondlabel.innerText = "User Name : ";
+    maindiv.appendChild(secondlabel);
+
+    // Input username
+    const userInp = document.createElement("input");
+    userInp.id = "userInp";
+    userInp.style.color = "white";
+    userInp.placeholder = "Enter your Name ";
+    maindiv.appendChild(userInp);
+
+    //label 3 = phone number
+    const thridlabel = document.createElement("label");
+    thridlabel.id = "thridlabel";
+    thridlabel.style.padding = "2px";
+    thridlabel.innerText = "Phone Number : ";
+    maindiv.appendChild(thridlabel);
+
+    // Input phone number
+    const phoneNum = document.createElement("input");
+    phoneNum.id = "phoneNum";
+    phoneNum.type = "number";
+    phoneNum.placeholder = "Enter your Number ";
+    maindiv.appendChild(phoneNum);
+
+    //label 4 = Email
+    const fourthlabel = document.createElement("label");
+    fourthlabel.id = "fourthlabel";
+    fourthlabel.style.padding = "2px";
+    fourthlabel.innerText = "Email : ";
+    maindiv.appendChild(fourthlabel);
+
+    // Input email
+    const email_id = document.createElement("input");
+    email_id.id = "email_id";
+    email_id.placeholder = "Enter your Email ";
+    maindiv.appendChild(email_id);
+
+    //label 5 = No of person
+    const fivethlabel = document.createElement("label");
+    fivethlabel.id = "fivethlabel";
+    fivethlabel.style.padding = "2px";
+    fivethlabel.innerText = "No of Person : ";
+    maindiv.appendChild(fivethlabel);
+
+    // Input no of person
+    const no_person = document.createElement("input");
+    no_person.id = "no_person";
+    no_person.placeholder = "No of Person ";
+    maindiv.appendChild(no_person);
+
+    //label 6 = Date
+    const sixthlabel = document.createElement("label");
+    sixthlabel.id = "sixthlabel";
+    sixthlabel.style.display = "NONE";
+    sixthlabel.style.padding = "2px";
+    sixthlabel.innerText = "Date : ";
+    maindiv.appendChild(sixthlabel);
+
+    // Input DATE
+    const datee = document.createElement("input");
+    datee.id = "datee";
+    datee.style.display = "NONE";
+    datee.type = "date";
+    maindiv.appendChild(datee);
+
+    //label 7 = Time
+    const seventhlabel = document.createElement("label");
+    seventhlabel.id = "seventhlabel";
+    seventhlabel.style.display = "NONE";
+    seventhlabel.style.padding = "2px";
+    seventhlabel.innerText = "Time : ";
+    maindiv.appendChild(seventhlabel);
+
+    // Input time
+    const timee = document.createElement("input");
+    timee.id = "timee";
+    timee.style.display = "NONE";
+    timee.type = "time";
+    maindiv.appendChild(timee);
+
+    //label 8 = Slot
+    const eighthlabel = document.createElement("label");
+    eighthlabel.id = "eighthlabel";
+    eighthlabel.style.display = "NONE";
+    eighthlabel.style.padding = "2px";
+    eighthlabel.innerText = "Slot : ";
+    maindiv.appendChild(eighthlabel);
+
+    // slot Select Option
+    const selectslot = document.createElement("select");
+    selectslot.id = "selectslot";
+    selectslot.style.display = "NONE";
+    maindiv.appendChild(selectslot);
+
+    // option 1 select your option
+    const slot_option1 = document.createElement("option");
+    slot_option1.id = "slot_option1";
+    slot_option1.style.display = "NONE";
+    slot_option1.innerText = "Select your option";
+    selectslot.appendChild(slot_option1);
+
+    // option 2 breakfast
+    const slot_option2 = document.createElement("option");
+    slot_option2.id = "slot_option2";
+    slot_option2.innerText = "Breakfast";
+    selectslot.appendChild(slot_option2);
+
+    // option 3 Lunch
+    const slot_option3 = document.createElement("option");
+    slot_option3.id = "slot_option3";
+    slot_option3.innerText = "Lunch";
+    selectslot.appendChild(slot_option3);
+    // option 3  dinner
+    const slot_option = document.createElement("option");
+    slot_option.id = "slot_option";
+    slot_option.innerText = "Dinner";
+    selectslot.appendChild(slot_option);
+
+    select.addEventListener("change", () => {
+      selectorr = select.value;
+
+      if (selectorr === "option_2") {
+        sixthlabel.style.display = "block";
+        datee.style.display = "block";
+
+      } else if (selectorr === "option_3") {
+        sixthlabel.style.display = "block";
+        datee.style.display = "block";
+        eighthlabel.style.display = "block";
+        selectslot.style.display = "block";
+       
+      } else if (selectorr === "option_4") {
+        sixthlabel.style.display = "block";
+        datee.style.display = "block";
+        seventhlabel.style.display = "block";
+        timee.style.display = "block";
+        eighthlabel.style.display = "none";
+        selectslot.style.display = "none";
+      } else {
+        sixthlabel.style.display = "none";
+        datee.style.display = "none";
+        eighthlabel.style.display = "none";
+        selectslot.style.display = "none";
+        seventhlabel.style.display = "none";
+        timee.style.display = "none";
+      }
+    });
+  </script>
+</html>
